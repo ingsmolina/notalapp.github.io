@@ -6,15 +6,32 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Centro de soporte de Notal: ayuda, contacto y preguntas frecuentes.">
   <link rel="icon" href="/favicon.ico">
-  <link rel="canonical" href="https://notaltech.com/support">
+  <link rel="canonical" href="https://notaltech.com/support.html">
+  <link rel="alternate" hreflang="en" href="https://notaltech.com/en/support.html">
   <meta property="og:title" content="Soporte — Notal">
   <meta property="og:description" content="Centro de soporte de Notal: ayuda, contacto y preguntas frecuentes.">
-  <meta property="og:url" content="https://notaltech.com/support">
+  <meta property="og:url" content="https://notaltech.com/support.html">
   <link rel="stylesheet" href="assets/css/style.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
 <body>
   <div class="container">
-    <header><a href="/" class="brand"><span class="logo">N</span>Notal</a></header>
+    <header role="navigation" aria-label="Principal">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-controls="site-nav" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <a class="brand" href="/" aria-label="Inicio Notal">
+        <img src="assets/img/icon_notal_final-iOS-Default-1024x1024@1x.png" alt="Notal logo" class="app-logo">
+        <span>Notal</span>
+      </a>
+      <nav id="site-nav">
+        <a href="/#features">Funciones</a>
+        <a href="/#pricing">Pro</a>
+        <a href="/support.html" class="active" aria-current="page">Soporte</a>
+        <a href="/privacy.html">Privacidad</a>
+        <a href="/en/support.html" style="margin-left:12px;font-weight:700;text-decoration:none">EN</a>
+      </nav>
+    </header>
 
     <h1 aria-label="Centro de soporte Notal">Soporte</h1>
     <p class="muted">¿Necesitas ayuda con Notal? Estamos para ayudarte.</p>
@@ -22,7 +39,6 @@
     <div class="card" style="margin-top:16px">
       <h3>Contacto rápido</h3>
       <p>Escríbenos y te responderemos lo antes posible.</p>
-      <!-- TODO: reemplaza por tu email o formulario -->
       <p><strong>Email:</strong> <a href="mailto:support@notaltech.com">support@notaltech.com</a></p>
       <p><strong>Soporte técnico:</strong> <a href="mailto:support@notaltech.com?subject=Technical Support — Notal">support@notaltech.com</a></p>
     </div>
@@ -50,21 +66,10 @@
       <a href="/" class="btn-small" role="button" aria-label="Volver al inicio">Volver al inicio</a>
     </div>
 
-    <div class="card" style="margin-top:16px">
-      <h3>English — Support</h3>
-      <p class="muted">Need help with Notal? We’re here for you.</p>
-      <p><strong>Email:</strong> <a href="mailto:support@notaltech.com">support@notaltech.com</a></p>
-      <ul>
-        <li><strong>Activate Notal Pro:</strong> trigger any Pro feature in the app (e.g., type <code>=</code> in a table cell) to open the subscription screen.</li>
-        <li><strong>Restore Purchases:</strong> tap <em>“Restore purchases”</em> in the paywall. Use the same Apple ID as the original purchase.</li>
-        <li><strong>iCloud Sync:</strong> Notal Pro keeps your notes in sync across devices via iCloud.</li>
-        <li><strong>Requirements:</strong> iOS 16 or later.</li>
-      </ul>
-    </div>
-
-    <p class="muted" style="margin-top:24px">© <span id="y"></span> Notal • <a href="/privacy">Privacidad</a></p>
+    <p class="muted" style="margin-top:24px">© <span id="y"></span> Notal • <a href="/privacy.html">Privacidad</a></p>
   </div>
+
   <script src="assets/js/main.js"></script>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

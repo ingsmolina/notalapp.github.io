@@ -1,6 +1,6 @@
-// Notal — vanilla JS helpers
+// Notal — vanilla JS (minimal)
 
-// 1) Mobile navbar hamburger toggle
+// Mobile navbar hamburger toggle
 (function(){
   var btn = document.querySelector('.nav-toggle');
   var nav = document.getElementById('site-nav');
@@ -21,39 +21,22 @@
 
   btn.addEventListener('click', toggle);
 
+  // Close on link click (mobile)
   nav.addEventListener('click', function(e){
-    if(e.target && e.target.tagName && e.target.tagName.toLowerCase()==='a'){
+    var t = e.target;
+    if(t && t.tagName && t.tagName.toLowerCase()==='a'){
       nav.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-expanded','false');
       setIcon(false);
     }
   });
 
+  // Close on Escape
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape'){
       nav.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-expanded','false');
       setIcon(false);
     }
-  });
-})();
-
-// 2) Persist simple language preference when tapping EN
-(function(){
-  var link = document.getElementById('langLink');
-  if(!link) return;
-  link.addEventListener('click', function(){
-    try{ localStorage.setItem('notal_lang', 'en'); }catch(_){ }
-  });
-})();
-
-// 3) (Optional) Smooth details animation for FAQ — safe if elements absent
-(function(){
-  var details = document.querySelectorAll('section#faq details');
-  if(!details || !details.length) return;
-  details.forEach(function(det){
-    det.addEventListener('toggle', function(){
-      // Let the browser handle it; keep minimal to avoid layout jank
-    });
   });
 })();
