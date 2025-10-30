@@ -328,3 +328,50 @@ header{position:relative}
 
 .plan-card.recommended{border-color:color-mix(in oklab, var(--brand-2) 35%, transparent);background:color-mix(in oklab, var(--brand-2) 6%, transparent)}
 .plan-card.active{border-color:color-mix(in oklab, var(--brand-2) 45%, transparent)}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Back to top button ===== */
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: var(--brand-2, #0E2A47);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  z-index: 1000;
+  font-size: 18px;
+  line-height: 0;
+}
+
+#backToTop:hover {
+  background: var(--brand-1, #4BA3F2);
+  transform: translateY(-3px);
+}
+
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  #backToTop {
+    right: 16px;
+    bottom: 20px;
+    width: 54px;
+    height: 54px;
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+}

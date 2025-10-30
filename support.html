@@ -24,12 +24,13 @@
         <img src="assets/img/icon_notal_final-iOS-Default-1024x1024@1x.png" alt="Notal logo" class="app-logo">
         <span>Notal</span>
       </a>
+      <!-- ES page navbar -->
       <nav id="site-nav">
         <a href="/#features">Funciones</a>
         <a href="/#pricing">Pro</a>
-        <a href="/support.html" class="active" aria-current="page">Soporte</a>
+        <a href="/support.html">Soporte</a>
         <a href="/privacy.html">Privacidad</a>
-        <a href="/en/support.html" style="margin-left:12px;font-weight:700;text-decoration:none">EN</a>
+        <a href="/en/" id="langLink" style="margin-left:12px;font-weight:700;text-decoration:none">EN</a>
       </nav>
     </header>
 
@@ -68,7 +69,9 @@
 
     <p class="muted" style="margin-top:24px">© <span id="y"></span> Notal • <a href="/privacy.html">Privacidad</a></p>
   </div>
-
+  <button id="backToTop" aria-label="Volver arriba" title="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
   <script src="assets/js/main.js"></script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>

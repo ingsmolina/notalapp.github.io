@@ -27,9 +27,9 @@
       <nav id="site-nav">
         <a href="/en/#features">Features</a>
         <a href="/en/#pricing">Pro</a>
-        <a href="/en/support.html" class="active" aria-current="page">Support</a>
+        <a href="/en/support.html">Support</a>
         <a href="/en/privacy.html">Privacy</a>
-        <a href="/support.html" style="margin-left:12px;font-weight:700;text-decoration:none">ES</a>
+        <a href="/" id="langLink" style="margin-left:12px;font-weight:700;text-decoration:none">ES</a>
       </nav>
     </header>
 
@@ -68,7 +68,9 @@
 
     <p class="muted" style="margin-top:24px">© <span id="y"></span> Notal • <a href="/en/privacy.html">Privacy</a></p>
   </div>
-
+  <button id="backToTop" aria-label="Volver arriba" title="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
   <script src="/assets/js/main.js"></script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
