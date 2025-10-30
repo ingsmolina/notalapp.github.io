@@ -15,15 +15,19 @@
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
   <div class="container">
     <header role="navigation" aria-label="Main">
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
       <a class="brand" href="/en/" aria-label="Home Notal">
-        <div class="logo" aria-hidden="true">N</div>
-        <strong>Notal</strong>
+        <img src="/assets/img/icon_notal_final-iOS-Default-1024x1024@1x.png" alt="Notal logo" class="app-logo">
+        <span>Notal</span>
       </a>
-      <nav>
+      <nav id="site-nav">
         <a href="#features">Features</a>
         <a href="#pricing">Pro</a>
         <a href="../support.html">Support</a>
@@ -50,7 +54,20 @@
       <div>
         <div class="card">
           <div class="kicker">Preview</div>
-          <img src="/hero-mock.png" alt="Screenshot of Notal showing a text block and a table with formulas" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08)">
+          <div class="hero-gallery" role="region" aria-label="Notal preview">
+            <!-- Light / Default screenshots -->
+            <div class="iphone-scroll screens light" role="list" aria-label="Screenshots (light mode)">
+              <img role="listitem" src="/assets/img/mock_default_1.PNG" alt="Notal preview light 1">
+              <img role="listitem" src="/assets/img/mock_default_2.PNG" alt="Notal preview light 2">
+              <img role="listitem" src="/assets/img/mock_default_3.PNG" alt="Notal preview light 3">
+            </div>
+            <!-- Dark screenshots -->
+            <div class="iphone-scroll screens dark" role="list" aria-label="Screenshots (dark mode)">
+              <img role="listitem" src="/assets/img/mock_dark_1.PNG" alt="Notal preview dark 1">
+              <img role="listitem" src="/assets/img/mock_dark_2.PNG" alt="Notal preview dark 2">
+              <img role="listitem" src="/assets/img/mock_dark_3.PNG" alt="Notal preview dark 3">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -92,26 +109,65 @@
 
     <section id="pricing" style="margin-top:28px">
       <div class="kicker">Notal Pro</div>
-      <h2>More power when you need it</h2>
-      <div class="grid" style="grid-template-columns: repeat(2,1fr)">
-        <div class="card">
-          <strong>Monthly</strong>
-          <div class="mini">Pay month to month</div>
-          <div style="margin-top:12px" class="mini">Includes: formulas, operators, autos, and iCloud Sync.</div>
-          <div style="margin-top:14px">
-            <a class="btn" href="#" role="button" aria-disabled="true">Subscribe in the app</a>
+      <h2>Choose your plan</h2>
+
+      <div class="grid pricing-grid" role="list">
+        <!-- Monthly plan -->
+        <div class="plan-card card" role="listitem">
+          <div class="plan-head">
+            <strong>Monthly</strong>
           </div>
+          <div class="price" aria-label="Monthly price">
+            <span class="currency">US$</span>
+            <span class="price-amount">2.99</span>
+            <span class="per">/month</span>
+          </div>
+          <ul class="feature-list" aria-label="Includes">
+            <li>Formulas and operators</li>
+            <li>Autos: SUM, AVG, MIN, MAX, COUNT</li>
+            <li>iCloud sync</li>
+          </ul>
+          <a class="btn" href="#" role="button" aria-disabled="true">Subscribe in the app</a>
         </div>
-        <div class="card">
-          <strong>Yearly</strong> <span class="mini" style="color:var(--brand-2)">• Most popular</span>
-          <div class="mini">Save with 12 months</div>
-          <div style="margin-top:12px" class="mini">Includes everything from the monthly plan at a better price.</div>
-          <div style="margin-top:14px">
-            <a class="btn" href="#" role="button" aria-disabled="true">Subscribe in the app</a>
+
+        <!-- Yearly plan (recommended) -->
+        <div class="plan-card card recommended" role="listitem">
+          <div class="plan-head">
+            <strong>Yearly</strong>
+            <span class="badge popular">Most popular</span>
           </div>
+          <div class="price" aria-label="Yearly price">
+            <span class="currency">US$</span>
+            <span class="price-amount">14.99</span>
+            <span class="per">/year</span>
+          </div>
+          <ul class="feature-list" aria-label="Includes">
+            <li>Everything in Monthly</li>
+            <li>Save versus paying monthly</li>
+            <li>Priority support</li>
+          </ul>
+          <a class="btn" href="#" role="button" aria-disabled="true">Subscribe in the app</a>
+        </div>
+
+        <!-- Seasonal promotions -->
+        <div class="plan-card card promo" role="listitem">
+          <div class="plan-head">
+            <strong>Seasonal promotions</strong>
+            <span class="badge limited">Limited</span>
+          </div>
+          <div class="price" aria-label="Seasonal promotions">
+            <span class="mini">Occasional discounts on special dates.</span>
+          </div>
+          <ul class="feature-list" aria-label="Details">
+            <li>Launch and holiday offers</li>
+            <li>Terms and availability apply</li>
+            <li>Announced inside the app</li>
+          </ul>
+          <a class="btn secondary" href="#" role="button" aria-disabled="true">View promotions</a>
         </div>
       </div>
-      <p class="mini" style="margin-top:10px">Purchases are managed with StoreKit. You can restore them from the paywall.</p>
+
+      <p class="mini" style="margin-top:10px">Prices are indicative. Purchases are managed with StoreKit. You can restore them from the paywall.</p>
     </section>
 
     <footer>
