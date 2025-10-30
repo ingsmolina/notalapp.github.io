@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Política de privacidad — Notal</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Política de privacidad de Notal.">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://notaltech.com/privacy">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header><a href="/" class="brand"><span class="logo">N</span>Notal</a></header>
+
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last Updated: <span id="d"></span></p>
+
+    <div class="card">
+      <h2>Privacy Policy — Notal</h2>
+      <p>Notal is a note‑taking app designed with privacy‑first principles, collecting only what is strictly necessary to provide its features.</p>
+
+      <h2>1. Data Controller</h2>
+      <p><strong>NotalTech</strong> (<a href="https://notaltech.com">https://notaltech.com</a>) is the data controller for this application.<br>
+      Contact: <a href="mailto:privacy@notaltech.com">privacy@notaltech.com</a></p>
+
+      <h2>2. Data We Process</h2>
+      <ul>
+        <li><strong>Note and Table Content:</strong> Your notes are stored locally on your device. If you use Notal Pro, you can choose to sync via iCloud (CloudKit). Apple manages encryption and storage through your Apple ID.</li>
+        <li><strong>In‑App Purchases:</strong> Purchases are handled entirely by Apple via StoreKit. We never access or store your payment information.</li>
+        <li><strong>Optional Diagnostics:</strong> We may collect anonymous technical metrics (crash logs, performance) to improve stability. No personal data or note content is included.</li>
+      </ul>
+
+      <h2>3. No Ads or Trackers</h2>
+      <p>Notal does not include advertisements, analytics SDKs, or third‑party tracking tools.</p>
+
+      <h2>4. User Control and Data Deletion</h2>
+      <ul>
+        <li>You can delete notes anytime within the app.</li>
+        <li>Uninstalling Notal removes local data from your device.</li>
+        <li>iCloud data remains under your Apple ID until deleted manually or until iCloud for Notal is disabled.</li>
+      </ul>
+
+      <h2>5. Security</h2>
+      <p>All synced data is encrypted in transit and at rest by Apple’s CloudKit infrastructure.</p>
+
+      <h2>6. Updates</h2>
+      <p>We may update this Policy periodically. The latest version will always be available at <a href="https://notaltech.com/privacy">https://notaltech.com/privacy</a>.</p>
+
+      <h2>7. Contact</h2>
+      <p>For questions or privacy concerns, contact:<br>
+      <a href="mailto:privacy@notaltech.com">privacy@notaltech.com</a></p>
+    </div>
+
+    <p class="muted" style="margin-top:24px">© <span id="y"></span> Notal • <a href="/support">Soporte</a></p>
+  </div>
+  <script src="assets/js/main.js"></script>
+  <script>
+    const d=new Date();
+    document.getElementById('y').textContent=d.getFullYear();
+    document.getElementById('d').textContent=d.toLocaleDateString('es-ES',{year:'numeric',month:'long',day:'2-digit'});
+  </script>
+</body>
+</html>
